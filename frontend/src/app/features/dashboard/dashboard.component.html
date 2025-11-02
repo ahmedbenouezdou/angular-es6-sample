@@ -1,0 +1,12 @@
+<section *ngIf="user$ | async as user; else login">
+  <h1>Bienvenue, {{ user.name }} !</h1>
+  <img *ngIf="user.picture" [src]="user.picture" alt="Photo de profil" />
+  <p>Email: {{ user.email }}</p>
+  <div class="roles">
+    <h2>Vos rôles</h2>
+    <app-role-badge *ngFor="let role of roles$ | async" [role]="role"></app-role-badge>
+  </div>
+</section>
+<ng-template #login>
+  <h1>Connectez-vous pour accéder au tableau de bord</h1>
+</ng-template>

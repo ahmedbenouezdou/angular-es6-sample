@@ -1,0 +1,20 @@
+section {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
+
+img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.roles {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}

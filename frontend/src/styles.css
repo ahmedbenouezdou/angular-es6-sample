@@ -1,0 +1,21 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #1f2933;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background: #2563eb;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}

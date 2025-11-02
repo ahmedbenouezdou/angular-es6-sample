@@ -1,0 +1,1 @@
+MERGE INTO roles KEY(name) VALUES ('ADMIN');
