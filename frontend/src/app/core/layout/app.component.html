@@ -1,0 +1,16 @@
+<nav>
+  <span class="brand">Secured Dashboard</span>
+  <ng-container *ngIf="user$ | async as user; else guest">
+    <span class="welcome">Bonjour {{ user.name }}</span>
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/users" *ngIf="(roles$ | async)?.includes('ADMIN')">Utilisateurs</a>
+    <a routerLink="/admin" *ngIf="(roles$ | async)?.includes('ADMIN')">Administration</a>
+    <button type="button" (click)="logout()">Déconnexion</button>
+  </ng-container>
+  <ng-template #guest>
+    <button type="button" (click)="login()">Connexion Google</button>
+  </ng-template>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>

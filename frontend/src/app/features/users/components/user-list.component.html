@@ -1,0 +1,21 @@
+<section>
+  <h1>Liste des utilisateurs</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Rôles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users$ | async">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <app-role-badge [role]="role" *ngFor="let role of user.roles ?? []"></app-role-badge>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
